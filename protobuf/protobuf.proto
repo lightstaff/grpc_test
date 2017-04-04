@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package gprc_test;
+
+// 色々便利
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option go_package = "protobuf";
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.goproto_getters_all) = false;
+
+// サービス定義
+service GRPCTestServcie {
+    // Helloと返すだけのサービス
+    rpc GetHello(Empty) returns (ReplyModel) {}
+    
+    // stream経由で受けた文字列を大文字化して返すサービス
+    rpc UpperCharacters(stream ReqModel) returns (stream ReplyModel) {}
+}
+
+// 空
+message Empty {}
+
+// Request
+message ReqModel {
+    string message = 1;
+}
+
+// Replay
+message ReplyModel {
+    string result = 1;
+}
