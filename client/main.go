@@ -13,6 +13,7 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo"
+	"github.com/labstack/echo/middleware"
 )
 
 type ServiceContext struct {
@@ -43,7 +44,7 @@ func main() {
 	e := echo.New()
 
 	e.Use(serviceContextMiddleware("localhost:18080"))
-
+	e.Use(middleware.Logger())
 	e.GET("/hello", GetHello)
 	e.POST("/upper-characters", UpperCharacters)
 

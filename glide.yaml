@@ -1,5 +1,7 @@
 package: github.com/lightstaff/grpc_test
 import:
+- package: github.com/Sirupsen/logrus
+  version: ^0.11.5
 - package: github.com/gogo/protobuf
   version: ^0.4.0
   subpackages:
@@ -7,10 +9,12 @@ import:
 - package: github.com/golang/protobuf
   subpackages:
   - proto
+- package: github.com/labstack/echo
+  version: ^3.1.0-rc.1
+  subpackages:
+  - middleware
 - package: golang.org/x/net
   subpackages:
   - context
 - package: google.golang.org/grpc
   version: ^1.2.0
-- package: github.com/labstack/echo
-  version: ^3.1.0-rc.1

@@ -1,6 +1,8 @@
-hash: bdf692a5db6da3c90bd6c7bbe2ae0b71084204595b1d4d514eb1be1a502f2130
-updated: 2017-04-04T16:18:12.25848414+09:00
+hash: 59dcc394aa803533611513325ff46711e3d2ce986485e5d58347f659e00af0a3
+updated: 2017-04-07T13:52:07.9269224+09:00
 imports:
+- name: github.com/dgrijalva/jwt-go
+  version: 2268707a8f0843315e2004ee4f1d021dc08baedf
 - name: github.com/gogo/protobuf
   version: 100ba4e885062801d56799d78530b73b178a78f3
   subpackages:
@@ -13,26 +15,32 @@ imports:
   - proto
 - name: github.com/labstack/echo
   version: 948d607539e92f3974d8f24951c8975d7342e24a
-- name: github.com/labstack/gommon
-  version: 9cedb429ffbe71a32a3ae7c65fd109cb7ae07804
   subpackages:
+  - middleware
+- name: github.com/labstack/gommon
+  version: 3ea5dae7a84cff4dae42b6172131ab99129e8c69
+  subpackages:
+  - bytes
   - color
   - log
+  - random
 - name: github.com/mattn/go-colorable
   version: ded68f7a9561c023e790de24279db7ebf473ea80
 - name: github.com/mattn/go-isatty
   version: fc9e8d8ef48496124e79ae0df75490096eccf6fe
+- name: github.com/Sirupsen/logrus
+  version: ba1b36c82c5e05c4f912a88eab0dcd91a171688f
 - name: github.com/valyala/bytebufferpool
   version: e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7
 - name: github.com/valyala/fasttemplate
   version: dcecefd839c4193db0d35b88ec65b4c12d360ab0
 - name: golang.org/x/crypto
-  version: 573951cbe80bb6352881271bb276f48749eab6f4
+  version: c2303dcbe84172e0c0da4c9f083eeca54c06f298
   subpackages:
   - acme
   - acme/autocert
 - name: golang.org/x/net
-  version: ffcf1bedda3b04ebb15a168a59800a73d6dc0f4d
+  version: d1e1b351919c6738fdeb9893d5c998b161464f0c
   subpackages:
   - context
   - context/ctxhttp
@@ -43,7 +51,7 @@ imports:
   - lex/httplex
   - trace
 - name: golang.org/x/sys
-  version: 493114f68206f85e7e333beccfabc11e98cba8dd
+  version: 7de4796419dc3b554e6dab3a119a62469569d299
   subpackages:
   - unix
 - name: golang.org/x/text
